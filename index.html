@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Team Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- <script src="https://kit.fontawesome.com/ed163875b7.js" crossorigin="anonymous"></script> -->
+  </head>
+  <body>
+    <div class="square">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="content">
+      <div id="content1" class="contentBx active">
+        <div class="contentBx active">
+          <div class="card">
+            <div class="imgBx">
+              <img src="assets/avatar1.jpg" alt="" />
+            </div>
+            <div class="textBx">
+              <h2>Someoone Famous <br /><b>Product Designer</b></h2>
+              <ul class="sci">
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="content2" class="contentBx">
+        <div class="card">
+          <div class="imgBx">
+            <img src="assets/avatar2.jpg" alt="" />
+          </div>
+          <div class="textBx">
+            <h2>Someoone Famous <br /><b>Product Designer</b></h2>
+            <ul class="sci">
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="content3" class="contentBx">
+        <div class="card">
+          <div class="imgBx">
+            <img src="assets/avatar3.jpg" alt="" />
+          </div>
+          <div class="textBx">
+            <h2>Someoone Famous <br /><b>Product Designer</b></h2>
+            <ul class="sci">
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="content4" class="contentBx">
+        <div class="card">
+          <div class="imgBx">
+            <img src="assets/avatar4.jpg" alt="" />
+          </div>
+          <div class="textBx">
+            <h2>Someoone Famous <br /><b>Product Designer</b></h2>
+            <ul class="sci">
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="icon">
+        <div class="imgBx active" data-id="content1">
+          <img src="assets/avatar1.jpg" />
+        </div>
+        <div class="imgBx" data-id="content2">
+          <img src="assets/avatar2.jpg" />
+        </div>
+        <div class="imgBx" data-id="content3">
+          <img src="assets/avatar3.jpg" />
+        </div>
+        <div class="imgBx" data-id="content4">
+          <img src="assets/avatar4.jpg" />
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/ed163875b7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let imgBx = document.querySelectorAll(".imgBx");
+      let contentBx = document.querySelectorAll(".contentBx");
+
+      for (var i = 0; i < imgBx.length; i++) {
+        imgBx[i].addEventListener("mouseover", function () {
+          for (let index = 0; index < imgBx.length; index++) {
+            imgBx[i].className = imgBx;
+          }
+          this.className = "contentBx active";
+        });
+      }
+    </script>
+  </body>
+</html>

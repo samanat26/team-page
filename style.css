@@ -11,24 +11,33 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* min-height: 100vh; */
+  // min-height: 100vh;
 }
 
-.square {
-  position: relative;
-  top: -150px;
+.row{
   width: 400px;
   height: 400px;
+  margin-top: 10px ;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.square {
+   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
 
 .square span {
-  position: absolute;
-  inset: 0;
-  border: 2px solid #333;
-  opacity: 0.5;
+    position: absolute;
+    left: -140px;
+    bottom: -100px;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #333;
+    opacity: 0.5;
 }
 
 .square span:nth-child(1) {
@@ -64,10 +73,8 @@ body {
 }
 
 .bottom {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  padding: 40px 50px;
+  padding: 10px 50px;
   background: #66a3ff;
   display: flex;
   justify-content: center;
@@ -83,25 +90,27 @@ body {
   gap: 40px;
 }
 
-.icon .imgBx {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  overflow: hidden;
-  transition: 0.5s;
-  box-shadow: 0 0 0 4px #fff;
-  opacity: 0.5;
+.imgBx {
+      width: 40px;
+    min-width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 8px 0 0;
+    border-radius: 50%;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.5s;
 }
 
-.icon .imgBx.active {
+.imgBx.active {
   opacity: 1;
   scale: 1.2;
   margin: 0 10px;
   box-shadow: 0 0 0 4px #fff, 0 0 0 10px #66a3ff, 0 0 0 12px #fff;
 }
 
-.icon .imgBx img {
+.imgBx img {
   position: absolute;
   top: 0;
   left: 0;
@@ -110,17 +119,21 @@ body {
   object-fit: cover;
 }
 
+.card-container{
+       width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+  transition: 0.5s;
+}
 .mycard{
-  position: absolute;
-  right: 43%;
-  top: 20%;
-  /* inset: 0; */
-  display: flex;
-  align-content: center;
-  align-items: center;
-   /* transform: scale(0); */
-  transition: 0.5s; 
-  /* opacity: 0 */
+    width: max-content;
+    margin: 0 auto;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    /* transform: scale(0); */
+    transition: 0.5s;
+    //  opacity: 0;
 }
 .mycard .active{
   transform: scale(0);
@@ -128,22 +141,18 @@ body {
   transition-delay: 0.5s
 }
 .contentBx {
-  position: absolute;
-  inset: 0;
+  // position: absolute;
+  // inset: 0;
+  width: max-content;
   display: flex;
   align-content: center;
   align-items: center;
-  transform: scale(0);
+  // transform: scale(0);
   transition: 0.5s;
-  opacity: 0;
+  // opacity: 0;
 }
 
-.contentBx.active {
-  transform: scale(0);
-  opacity: 1;
-  transition-delay: 0.5s;
-}
-.card {
+.cards {
   position: relative;
   display: flex;
   justify-content: center;
@@ -151,13 +160,20 @@ body {
   flex-direction: column;
   text-align: center;
   gap: 15px;
+      width: 149rem;
+     min-width: 1020px; 
+    max-width: 1020px; 
+    padding: 90px;
+    overflow: hidden;
+
 }
 .imgBx {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   overflow: hidden;
+  margin: auto;
 }
 
 .imgBx img {
@@ -175,7 +191,7 @@ body {
   align-items: center;
   flex-direction: column;
 }
-.card .textBx h2 {
+.textBx h2 {
   position: relative;
   font-size: 1.25em;
   font-weight: 600;
@@ -192,31 +208,35 @@ body {
   
 }
 
-.card .sci {
+.sci {
   position: relative;
   display: flex;
   gap: 7px;
   margin-top: 10px;
 }
 
-.card .sci li {
+.sci li {
   list-style: none;
+ 
+
 }
 
-.card .sci li a {
+.sci li a {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #333;
-  color: #fff;
+  // background: #931515;
+  color: #ece6e6;
   text-decoration: none;
   border-radius: 50%;
   transition: 0.5s;
+    background: red;
 }
 
-.card .sci li a:hover {
+.sci li a:hover {
   background: #66a3ff;
+  color: #fff;
 }
